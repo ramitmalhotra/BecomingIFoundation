@@ -1,123 +1,170 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- stylesheets -->
-    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../css/registration.css" rel="stylesheet" type="text/css" media="all">
-    <title>Register</title>
-  </head>
-  <body>
-    <div class="container">
+<html lang="en">
 
-      <!-- start form -->
-      <div id="questions">
-        <h1>Register</h1>
-        <hr>
-        <form role="form">
-          <div class="form-group">
-            <label for="FName">First name</label>
-            <input id="FName" class="form-control person" type="text" placeholder="Enter your first name.">
-          </div>
+<head>
 
-          <div class="form-group">
-            <label for="SName">Last name</label>
-            <input id="SName" class="form-control person" type="text" placeholder="Enter your last name.">
-          </div>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-          <div class="form-group">
-            <label for="DOB">Date of Birth</label>
-            <input id="DOB" class="form-control person" type="text" maxlength="10" placeholder="MM/DD/YYYY"> 
-          </div>
+  <title>Sign up</title>
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-          <div class="form-group">
-            <label for="Gender">Gender</label><br>
-            <form>
-              <input type="radio" name="sex" value="male">Male<br>
-              <input type="radio" name="sex" value="female">Female<br><br>
-            </form>
+  <!-- Custom CSS -->
+  <link href="../css/heroic-features.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron hero-spacer">
+      <h1>Becoming I Foundation</h1>
+    </header>  
+    <hr>
+    <!-- End Jumbotron Header -->
+
+    <!-- Title -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Register for an account</h2>
+      </div>
+    </div>
+    <!-- End Title -->
+
+
+    <hr>
+        
+    <!-- Page Features -->
+    <div id="questions">
+      <form role="form">
+        <div class="form-group">
+          <label for="FName">First name</label>
+          <input id="FName" class="form-control" type="text" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group">
+          <label for="SName">Last name</label>
+          <input id="SName" class="form-control" type="text" placeholder="Enter your last name">
+        </div>
+
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input id="Email" class="form-control" type="email" placeholder="Enter email address">
+        </div>
+
+        <div class="form-group">
+          <label for="UserID">Username</label>
+          <input id="UserID" class="form-control" type="text" placeholder="Choose a username">
+        </div>
+
+        <div class="form-group">
+          <label for="Password">Password</label>
+          <input id="Password" class="form-control" type="password" placeholder="Select a password">
+        </div>
+
+        <div class="form-group">
+          <label for="Password">Confirm password</label>
+          <input id="Password" class="form-control" type="password" placeholder="Re-enter password">
+        </div>
+
+        <div class="form-group">
+          <label for="DOB">Date of Birth</label>
+          <input id="DOB" class="form-control" type="date" maxlength="10" placeholder="MM/DD/YYYY"> 
+        </div>
+
+        <div class="form-group">
+          <label for="Gender">Gender</label><br>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female<br><br>
           </div>
           
-          <div class="form-group">
-            <label for="Student">Current student status</label><br>
-            <form>
+        <div class="form-group">
+          <label for="Student">Current student status</label><br>
               <input type="radio" name="student" value="Not a student">Not a student<br>
               <input type="radio" name="student" value="High school student">High school student<br>
               <input type="radio" name="student" value="Undergraduate student">Undergraduate student<br>
               <input type="radio" name="student" value="Graduate student">Graduate student<br>
               <br>
-            </form>
-          </div>
+        </div>
 
-          <div class="form-group">
-            <label for="InstName">Educational institution (if student)</label>
-            <input id="InstName" class="form-control person" type="text" placeholder="Educational institution or school">
-          </div>
+        <div class="form-group">
+          <label for="InstName">Educational institution (if student)</label>
+          <input id="InstName" class="form-control" type="text" placeholder="Educational institution or school">
+        </div>
 
-          <div class="form-group">
-            <label for="OccupationDetail">Current occupation (if not a student)</label>
-            <input id="OccupationDetail" class="form-control person" type="text" placeholder="Occupation">
-          </div>
+        <div class="form-group">
+          <label for="OccupationDetail">Current occupation (if not a student)</label>
+          <input id="OccupationDetail" class="form-control" type="text" placeholder="Occupation">
+        </div>
 
-          <div class="form-group">
-            <label for="InstName">Employer (if not a student)</label>
-            <input id="InstName" class="form-control person" type="text" placeholder="Employer or place of work">
-          </div>
+        <div class="form-group">
+          <label for="InstName">Employer (if not a student)</label>
+          <input id="InstName" class="form-control" type="text" placeholder="Employer or place of work">
+        </div>
 
-          <div class="form-group">
-            <label for="InstType">Type of employer (if not a student)</label><br>
-            <form>
-              <input type="radio" name="InstType" value="Non-profit">Non-profit institution<br>
-              <input type="radio" name="InstType" value="For-profit">For-profit institution or company<br>
-              <input type="radio" name="InstType" value="Other">Other<br>
+        <div class="form-group">
+          <label for="InstType">Type of employer (if not a student)</label><br>
+            <input type="radio" name="InstType" value="Non-profit">Non-profit institution<br>
+            <input type="radio" name="InstType" value="For-profit">For-profit institution or company<br>
+            <input type="radio" name="InstType" value="Other">Other<br>
+            <br>
+        </div>
+
+        <div class="form-group">
+          <label for="Continue">Do you plan to continue volunteering with Becoming I Foundation?</label><br>
+            <input type="radio" name="Continue" value="Yes - Short-term (0-1 year)">Yes, for the short-term (<1 year)<br>
+            <input type="radio" name="Continue" value="Yes - Long-term (>1 year)">Yes, for the long-term (>1 year)<br>
+            <input type="radio" name="Continue" value="No">No<br>
+            <input type="radio" name="Continue" value="Undecided">Undecided<br>
               <br>
-            </form>
-          </div>
-
-          <div class="form-group">
-            <label for="Continue">Do you plan to continue volunteering with Becoming I Foundation?</label><br>
-            <form>
-              <input type="radio" name="Continue" value="Yes - Short-term (0-1 year)">Yes, for the short-term (<1 year)<br>
-              <input type="radio" name="Continue" value="Yes - Long-term (>1 year)">Yes, for the long-term (>1 year)<br>
-              <input type="radio" name="Continue" value="No">No<br>
-              <input type="radio" name="Continue" value="Undecided">Undecided<br>
-              <br>
-            </form>
           </div>
           
-          <div class="form-group">
-             <label for="SkillDesc">Please list and describe specific skills that you have that may be helpful for project work</label>
-              <textarea cols="50" rows="4" name="SkillDesc" class="form-control person" placeholder="e.g. javascript, teaching, video editing, graphic design, etc"></textarea>     
-          </div>
+        <div class="form-group">
+          <label for="SkillDesc">Please list and describe specific skills that you have that may be helpful for project work</label>
+          <textarea cols="50" rows="4" name="SkillDesc" class="form-control" placeholder="e.g. javascript, teaching, video editing, graphic design, etc"></textarea>     
+        </div>
 
           
-          <div class="form-group">
-                  <legend>Contact information</legend>
-                  <p><label for="Phone">Phone number</label>
-                      <input type="text" id="Phone" name="Phone" class="form-control person" maxlength="12" placeholder="XXX-XXX-XXXX"/></p>                  
-                  <p><label for="Address">Address</label>
-                      <input type="text" id="Address" name="Address" class="form-control person"/></p>
-                  <p><label for="City">City</label>
-                      <input type="text" id="City" name="City" class="form-control person"/></p>
-                  <p><label for="State">State</label>
-                      <input type="text" id="State" name="Province" class="form-control person"/></p>
-                  <p><label for="Zip/Pin" >Zip/Pin</label>
-                      <input type="text" id="Zip/Pin" name="Zip/Pin" class="form-control person"/></p>
-                  <p><label for="Country" >Country</label>
-                      <input type="text" id="Country" name="Country" class="form-control person"/></p>
-          </div>
+        <div class="form-group">
+          <legend>Contact information</legend>
+          <p><label for="Phone">Phone number</label>
+            <input type="text" id="Phone" name="Phone" class="form-control" maxlength="12" placeholder="XXX-XXX-XXXX"/>
+          </p>                  
+          <p><label for="Address">Address</label>
+            <input type="text" id="Address" name="Address" class="form-control"/>
+          </p>
+          <p><label for="City">City</label>
+            <input type="text" id="City" name="City" class="form-control"/>
+          </p>
+          <p><label for="State">State</label>
+            <input type="text" id="State" name="Province" class="form-control"/>
+          </p>
+          <p><label for="Zip/Pin" >Zip/Pin</label>
+            <input type="text" id="Zip/Pin" name="Zip/Pin" class="form-control"/>
+          </p>
+          <p><label for="Country" >Country</label>
+            <input type="text" id="Country" name="Country" class="form-control"/>
+          </p>
+        </div>
         
-        </form>
-        <button id="btn-click" type="submit" class="btn btn-primary btn-lg">Register!</button>
-        <hr>
-      </div>
-      <!-- end form -->
-
-
-      <!-- github share --> 
+      </form>
+        
+      <button id="btn-click" type="submit" class="btn btn-primary btn-lg">Register!</button>
+      <hr>
     </div>
-    <!-- scripts -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="../js/registration.js"></script>
-  </body>
+    <!-- Page Features -->
+
+    <hr>
+
+  </div>
+  <!-- /.container -->
+
+</body>
+
 </html>
