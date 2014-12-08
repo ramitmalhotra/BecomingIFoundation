@@ -30,7 +30,7 @@ body{
 	margin-top:20px;
 	margin-right:auto;
 	margin-left:auto;
-	width:80%;
+	width:100%;
 	background: #fff;
 }
 .banner {
@@ -98,7 +98,7 @@ form{
  	 -o-border-radius:0.3em;
  	 margin-bottom: 10px;
 }
-.right-form input[type=text], input[type=password] {
+.right-form input[type=text] {
 	font-family: 'Open Sans', sans-serif;
 	width:90%;
 	padding: 0.7em 1em 0.7em 1em;
@@ -261,8 +261,8 @@ input[type=checkbox].css-checkbox10:checked + label i.css-label10 {
 }
 @media only screen and (max-width:1440px) and (min-width:1366px) {
 	.main{
-	width:80%;
-	margin:6em auto 0;
+	width:100%;
+	margin:0 auto 0;
 	}
 	.copy-right p {
 	margin: 3.8em 0em;

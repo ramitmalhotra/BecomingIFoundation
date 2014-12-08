@@ -8,9 +8,6 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.hero-spacer {
-    margin-top: 50px;
-}
 
 .hero-feature {
     margin-bottom: 30px;
@@ -18,4 +15,41 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+#footer {
+	position: relative;
+	z-index: 2000;
+	width: 100%;
+	background-color: #fff;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#social_underline {
+	text-decoration: underline;
+}
+
+#footer_container {
+	padding: 20px 3.75em;
+	color: #2F3855;
+}
+
+#footer_logo {
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	font-weight: 400;
+	float: left;
+}
+
+#footer_social_container {
+	float: right;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+.social {
+	margin-left: 10px;
 }
