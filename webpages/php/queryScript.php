@@ -50,7 +50,7 @@ function getProjects($city){
 }
 
 function getVolunteers($project){
-	$q = "Select personnel.fname,personnel.sname,personnel.phone,personnel.email,volunteer.role from personnel,volunteer where personnel.userid = volunteer.userid and volunteer.projectid='".$project."'";
+	$q = "Select distinct personnel.fname,personnel.sname,personnel.phone,personnel.email,volunteer.role from personnel,volunteer where personnel.userid = volunteer.userid and volunteer.projectid='".$project."'";
 	$resultVolunteers = pg_query($q);
 	if (!$resultVolunteers) {
 		$errormessage = pg_last_error();
