@@ -151,7 +151,7 @@ or die('Could not connect: ' . pg_last_error());
                             $("#tableBody").html('');
                             if(data.length === 0){
                             	$(".table-responsive").hide("fast");
-                                alert("Sorry, no one in this project right now!");                                
+                                alert("Sorry, no current volunteers with those skills right now!");                                
                             }
                             else{
 	                            $.each(data, function(key,value){

@@ -167,7 +167,7 @@
           </div>
           
         <div class="form-group">
-          <label for="SkillDesc">Please list and describe specific skills that you have that may be helpful for project work</label>
+          <label for="SkillDesc">Please list specific skills that you have that may be helpful for project work (separate with commas)</label>
           <textarea cols="50" rows="4" name="SkillDesc" class="form-control" placeholder="e.g. javascript, teaching, video editing, graphic design, etc" required></textarea>     
         </div>
 
