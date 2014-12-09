@@ -26,6 +26,9 @@ else{
 }
 $continue = pg_escape_string($_POST['Continue']);
 $skills = pg_escape_string($_POST['SkillDesc']);
+$skills = str_replace(', ', ',', $skills);
+$skills = $trim($skills);
+$skillsArray = explode(',',$skills);
 $primaryPhone = pg_escape_string($_POST['Phone']);
 $address = pg_escape_string($_POST['Address']);
 $city = pg_escape_string($_POST['City']);
@@ -86,6 +89,32 @@ if (!$result) {
 	$return['e'] = $errormessage;
 	echo json_encode($return);
 	exit;
+}
+
+$sql1 = "Select userid from personnel where username='".$username."'";
+$result1 = pg_query($sql1);
+
+if (!$result1) {
+	$errormessage = pg_last_error();
+	$return=array();
+	$return['e'] = $errormessage;
+	echo json_encode($return);
+	exit;
+}
+if (pg_numrows($result1) > 0) {
+	$row = pg_fetch_array($result1, NULL, PGSQL_ASSOC);
+	$userid = $row['userid'];
+}
+
+foreach($skillsArray as $skill){
+	$sql = "Insert into skills (userid,skill,skilldesc) VALUES ('".$userid."','".$skill."','".$skill."')";
+	$result = pg_query($sql);
+	if (!$result) {
+		$errormessage = pg_last_error();
+		$return['e'] = $errormessage;
+		echo json_encode($return);
+		exit;
+	}
 }
 //$result = pg_query_params($dbconn,$sql,Array($firstName,$lastName,$sex,$studentStatus,$occDetail,$date,$email,$phone,$address,$city,$state,$country,$pin,$username,$password,$continue,$dob,$instName,$instType));
 

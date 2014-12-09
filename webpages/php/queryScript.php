@@ -71,7 +71,7 @@ function getVolunteersBySkills($skills,$chapter){
 	if($chapter == 0){
 		$myarray = array();
 		foreach($skills as $skill){
-		$q = "select distinct personnel.userid, fname,sname,phone,email,city,role,projectname,chaptername,skill from skills,personnel,project,volunteer,chapter where LOWER(skill)=LOWER('".$skill."') and skills.userid=personnel.userid and skills.userid = volunteer.userid and skills.projectid=project.projectid and project.chapterid=chapter.chapterid";
+		$q = "select distinct personnel.userid,fname,sname,phone,email,city,role,projectname,chaptername,skill from skills,personnel,project,volunteer,chapter where LOWER(skill)=LOWER('".$skill."') and skills.userid=personnel.userid and skills.userid = volunteer.userid and volunteer.projectid = project.projectid and project.chapterid=chapter.chapterid";
 		$resultVolunteers = pg_query($q);
 		if (!$resultVolunteers) {
 			$errormessage = pg_last_error();
@@ -90,7 +90,7 @@ function getVolunteersBySkills($skills,$chapter){
 	else{
 		$myarray = array();
 		foreach($skills as $skill){ 
-			$q = "select distinct personnel.userid, fname,sname,phone,email,city,role,projectname,chaptername,skill from skills,personnel,project,volunteer,chapter where LOWER(skill)=LOWER('".$skill."') and skills.userid=personnel.userid and skills.userid = volunteer.userid and skills.projectid=project.projectid and project.chapterid=chapter.chapterid and chapter.chapterid='".$chapter."'";
+			$q = "select distinct personnel.userid, fname,sname,phone,email,city,role,projectname,chaptername,skill from skills,personnel,project,volunteer,chapter where LOWER(skill)=LOWER('".$skill."') and skills.userid=personnel.userid and skills.userid = volunteer.userid and volunteer.projectid = project.projectid and project.chapterid=chapter.chapterid and chapter.chapterid='".$chapter."'";
 			$resultVolunteers = pg_query($q);
 			if (!$resultVolunteers) {
 				$errormessage = pg_last_error();
